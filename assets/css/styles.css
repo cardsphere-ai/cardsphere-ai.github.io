@@ -115,6 +115,32 @@ a {
   text-decoration: none;
 }
 
+.brand-name {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 1.02rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.brand-word {
+  background: linear-gradient(90deg, #ffffff 0%, #e0f2fe 55%, #bff7ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 16px rgba(34, 211, 238, 0.1);
+}
+
+.brand-ai {
+  background: linear-gradient(90deg, #22d3ee, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .brand-icon {
   width: 44px;
   height: 44px;
@@ -229,19 +255,22 @@ a {
   display: inline-flex;
   width: fit-content;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   color: var(--cyan);
   border: 1px solid rgba(34, 211, 238, 0.26);
   border-radius: 999px;
   background: rgba(34, 211, 238, 0.08);
-  padding: 8px 12px;
+  padding: 10px 18px;
   font-weight: 800;
   font-size: 0.84rem;
+  line-height: 1.25;
+  white-space: nowrap;
 }
 
 .signal-dot {
   width: 8px;
   height: 8px;
+  flex: 0 0 8px;
   border-radius: 999px;
   background: var(--teal);
   box-shadow: 0 0 18px var(--teal);
@@ -261,22 +290,79 @@ h1 {
   max-width: 10ch;
 }
 
+.hero-title {
+  margin-top: 22px;
+  max-width: 760px;
+  color: #eef4ff;
+  font-size: clamp(3.35rem, 6.8vw, 5.75rem);
+  font-weight: 860;
+  line-height: 0.94;
+  letter-spacing: 0;
+  text-shadow: 0 0 26px rgba(34, 211, 238, 0.1);
+}
+
+.hero-title-main {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, #e0f2fe 52%, #bfefff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 28px rgba(34, 211, 238, 0.1);
+}
+
+.hero-title-accent {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-top: -0.03em;
+  font-size: 0.92em;
+  background: linear-gradient(90deg, #22d3ee, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
+@supports not ((background-clip: text) or (-webkit-background-clip: text)) {
+  .brand-word {
+    background: none;
+    color: #f8fafc;
+  }
+
+  .brand-ai {
+    background: none;
+    color: #22d3ee;
+  }
+
+  .hero-title-main {
+    background: none;
+    color: #f8fafc;
+  }
+
+  .hero-title-accent {
+    background: none;
+    color: #22d3ee;
+  }
+}
+
 .hero-category {
-  margin: 18px 0 0;
+  margin: 20px 0 0;
   color: var(--cyan);
   font-size: clamp(1.06rem, 2vw, 1.32rem);
   font-weight: 850;
 }
 
 .hero-subtitle {
-  margin: 22px 0 0;
+  margin: 20px 0 0;
   max-width: 720px;
   color: var(--muted);
   font-size: clamp(1.14rem, 2.4vw, 1.48rem);
 }
 
 .tagline {
-  margin: 20px 0 0;
+  margin: 18px 0 0;
   font-size: clamp(1.35rem, 3vw, 2.2rem);
   font-weight: 850;
   background: linear-gradient(135deg, var(--cyan), var(--blue), var(--violet), var(--magenta));
@@ -541,6 +627,10 @@ h1 {
   max-width: 860px;
 }
 
+.trust-band .eyebrow + h2 {
+  margin-top: 18px;
+}
+
 .legal-layout {
   padding: 64px 0 96px;
   display: grid;
@@ -697,6 +787,10 @@ h1 {
     border-radius: 12px;
   }
 
+  .brand-name {
+    font-size: 0.98rem;
+  }
+
   .nav-links {
     justify-content: flex-start;
   }
@@ -707,6 +801,12 @@ h1 {
 
   h1 {
     font-size: clamp(2.7rem, 16vw, 4.6rem);
+  }
+
+  .hero-title {
+    max-width: 100%;
+    font-size: clamp(2.8rem, 12.5vw, 4.25rem);
+    line-height: 0.98;
   }
 
   .hero-card {

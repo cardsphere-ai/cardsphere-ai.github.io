@@ -16,6 +16,19 @@ code, copyrighted card art, or unauthorized logos are included.
 - `privacy-policy/index.html`: clean URL redirect for `/privacy-policy`.
 - `support/index.html`: clean URL redirect for `/support`.
 
+## Brand Assets
+
+The landing page uses copied, existing CardSphere AI assets only:
+
+- `assets/img/cardsphere-app-icon.png`: copied from
+  `C:\cardsphere-ai\apps\mobile\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png`.
+- `assets/img/cardsphere-cosmic-card.png`: copied from
+  `C:\cardsphere-ai\apps\mobile\assets\brand\cardsphere_cosmic_card_cutout.png`.
+
+The public hero animation is CSS-only. It uses no generated imagery, videos,
+external frameworks, analytics, tracking scripts, cookies, app source code, or
+secrets.
+
 Legacy Markdown sources remain available:
 
 - `index.md`

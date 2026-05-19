@@ -16,7 +16,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cardsphere-ai.github.io/">
     <meta name="theme-color" content="#02030a">
-    <link rel="icon" href="data:,">
+    <link rel="icon" type="image/png" href="assets/img/cardsphere-app-icon.png">
+    <link rel="apple-touch-icon" href="assets/img/cardsphere-app-icon.png">
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
@@ -24,7 +25,14 @@
       <header class="site-header">
         <nav class="nav" aria-label="Main navigation">
           <a class="brand" href="index.html" aria-label="CardSphere AI home">
-            <span class="brand-mark" aria-hidden="true"></span>
+            <img
+              class="brand-icon"
+              src="assets/img/cardsphere-app-icon.png"
+              alt="CardSphere AI app icon"
+              width="44"
+              height="44"
+              decoding="async"
+            >
             <span>CardSphere AI</span>
           </a>
           <div class="nav-links">
@@ -37,14 +45,15 @@
 
       <main>
         <section class="hero" aria-labelledby="hero-title">
-          <div>
+          <div class="hero-copy">
             <span class="eyebrow"><span class="signal-dot"></span>Private beta foundation</span>
             <h1 id="hero-title">CardSphere AI</h1>
+            <p class="hero-category">Collector Intelligence for Trading Cards</p>
             <p class="tagline">Scan. Review. Decide.</p>
             <p class="hero-subtitle">
-              Collector Intelligence for Trading Cards. CardSphere AI helps collectors
-              make trading-card decisions clearer, safer, and smarter with evidence-first
-              scanning, portfolio intelligence, and local-first collection management.
+              CardSphere AI helps collectors make trading-card decisions clearer,
+              safer, and smarter with evidence-first scanning, portfolio intelligence,
+              and local-first collection management.
             </p>
             <div class="cta-row" aria-label="Primary links">
               <a class="button primary" href="privacy-policy.html">Privacy Policy</a>
@@ -54,13 +63,23 @@
           </div>
 
           <div class="hero-card" aria-label="CardSphere AI cosmic product preview">
-            <div class="floating-card">
-              <div class="scan-line" aria-hidden="true"></div>
-              <div class="floating-card-content">
-                <div class="floating-card-label">Collector Intelligence</div>
-                <div class="floating-card-small">Evidence, review, portfolio context</div>
-              </div>
+            <div class="hero-visual-frame">
+              <span class="hero-orbit hero-orbit-outer" aria-hidden="true"></span>
+              <span class="hero-orbit hero-orbit-inner" aria-hidden="true"></span>
+              <span class="hero-card-aura" aria-hidden="true"></span>
+              <img
+                class="hero-cosmic-card"
+                src="assets/img/cardsphere-cosmic-card.png"
+                alt="Floating CardSphere AI cosmic card visual"
+                width="420"
+                height="560"
+                loading="eager"
+                decoding="async"
+              >
+              <span class="hero-scan-beam" aria-hidden="true"></span>
             </div>
+            <div class="hero-pill hero-pill-beta">Private Beta</div>
+            <div class="hero-pill hero-pill-local">Local-first</div>
             <div class="hero-metrics" aria-hidden="true">
               <div class="metric">
                 <strong>Evidence</strong>

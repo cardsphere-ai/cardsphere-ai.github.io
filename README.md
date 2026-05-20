@@ -24,10 +24,34 @@ The landing page uses copied, existing CardSphere AI assets only:
   `C:\cardsphere-ai\apps\mobile\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png`.
 - `assets/img/cardsphere-cosmic-card.png`: copied from
   `C:\cardsphere-ai\apps\mobile\assets\brand\cardsphere_cosmic_card_cutout.png`.
+- `assets/img/cardsphere-social-preview.png`: copied from
+  `C:\cardsphere-ai\assets\play-store\feature-graphic\cardsphere_feature_graphic_1024x500.png`.
 
 The public hero animation is CSS-only. It uses no generated imagery, videos,
 external frameworks, analytics, tracking scripts, cookies, app source code, or
 secrets.
+
+## Social Link Previews
+
+Open Graph and Twitter/X large-card metadata are configured for the public pages
+using the custom domain `https://cardsphereai.com`.
+
+Primary preview image:
+
+- `https://cardsphereai.com/assets/img/cardsphere-social-preview.png`
+
+Preview QA after deployment:
+
+1. Open `https://cardsphereai.com/assets/img/cardsphere-social-preview.png`.
+2. Inspect page source for `og:image` and `twitter:image`.
+3. Test `https://cardsphereai.com` in LinkedIn Post Inspector.
+4. Test `https://cardsphereai.com` in Facebook Sharing Debugger.
+5. Test with the Twitter/X Card Validator if available.
+6. Share the URL in a private Telegram or WhatsApp chat.
+
+Telegram, WhatsApp, iMessage, Discord, Facebook, LinkedIn, and X/Twitter may
+cache previews. If an old image appears, wait for cache expiry or refresh with
+the platform debugger where available.
 
 Legacy Markdown sources remain available:
 
@@ -83,3 +107,15 @@ Future DNS notes:
   marketplaces, or pricing providers.
 - The site does not claim certain card outcomes or financial advice.
 - The site keeps provider-aware market wording and the no-scraping policy.
+
+## Brand Safety
+
+- This is the public site for CardSphere AI.
+- CardSphere AI is independent and is not affiliated with Cardsphere.com,
+  Space Cow Media, card publishers, grading companies, marketplaces, or pricing
+  providers.
+- Public copy should use the full product name, CardSphere AI.
+- Avoid shortening the product name to CardSphere in public copy.
+- Describe CardSphere AI as collector intelligence, scanner evidence,
+  OCR-assisted review, portfolio intelligence, local-first collection
+  management, optional cloud sync, and trading-card decision support.

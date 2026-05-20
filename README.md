@@ -26,6 +26,9 @@ The landing page uses copied, existing CardSphere AI assets only:
   `C:\cardsphere-ai\apps\mobile\assets\brand\cardsphere_cosmic_card_cutout.png`.
 - `assets/img/cardsphere-social-preview.png`: copied from
   `C:\cardsphere-ai\assets\play-store\feature-graphic\cardsphere_feature_graphic_1024x500.png`.
+- `assets/img/cardsphere-social-preview-1200x630.jpg`: derived from
+  `assets/img/cardsphere-social-preview.png` for WhatsApp/Open Graph
+  compatibility.
 
 The public hero animation is CSS-only. It uses no generated imagery, videos,
 external frameworks, analytics, tracking scripts, cookies, app source code, or
@@ -38,11 +41,11 @@ using the custom domain `https://cardsphereai.com`.
 
 Primary preview image:
 
-- `https://cardsphereai.com/assets/img/cardsphere-social-preview.png`
+- `https://cardsphereai.com/assets/img/cardsphere-social-preview-1200x630.jpg?v=20260520`
 
 Preview QA after deployment:
 
-1. Open `https://cardsphereai.com/assets/img/cardsphere-social-preview.png`.
+1. Open `https://cardsphereai.com/assets/img/cardsphere-social-preview-1200x630.jpg?v=20260520`.
 2. Inspect page source for `og:image` and `twitter:image`.
 3. Test `https://cardsphereai.com` in LinkedIn Post Inspector.
 4. Test `https://cardsphereai.com` in Facebook Sharing Debugger.
@@ -52,6 +55,18 @@ Preview QA after deployment:
 Telegram, WhatsApp, iMessage, Discord, Facebook, LinkedIn, and X/Twitter may
 cache previews. If an old image appears, wait for cache expiry or refresh with
 the platform debugger where available.
+
+## Social Preview Troubleshooting
+
+- WhatsApp may cache old previews aggressively.
+- Test the direct image URL:
+  `https://cardsphereai.com/assets/img/cardsphere-social-preview-1200x630.jpg?v=20260520`
+- Test the page with a cache-busting query:
+  `https://cardsphereai.com/?v=20260520`
+- If WhatsApp still shows plain text, wait and retry or test on another
+  account/device.
+- Facebook Sharing Debugger and LinkedIn Post Inspector can refresh their own
+  platform caches.
 
 Legacy Markdown sources remain available:
 

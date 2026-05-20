@@ -1,8 +1,7 @@
-document.documentElement.classList.add('js-ready');
-
 document.querySelectorAll('.nav').forEach((nav) => {
   const button = nav.querySelector('[data-nav-toggle]');
   const menu = nav.querySelector('.nav-links');
+  const label = button?.querySelector('span:last-child');
 
   if (!button || !menu) {
     return;
@@ -12,12 +11,18 @@ document.querySelectorAll('.nav').forEach((nav) => {
     menu.classList.remove('is-open');
     button.setAttribute('aria-expanded', 'false');
     button.setAttribute('aria-label', 'Open navigation menu');
+    if (label) {
+      label.textContent = 'Menu';
+    }
   };
 
   const openMenu = () => {
     menu.classList.add('is-open');
     button.setAttribute('aria-expanded', 'true');
     button.setAttribute('aria-label', 'Close navigation menu');
+    if (label) {
+      label.textContent = 'Close';
+    }
   };
 
   button.addEventListener('click', () => {

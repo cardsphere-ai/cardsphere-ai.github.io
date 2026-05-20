@@ -807,7 +807,7 @@ h1 {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .nav {
     position: relative;
     min-height: 64px;
@@ -818,17 +818,17 @@ h1 {
     min-width: 0;
   }
 
-  .js-ready .nav-menu-button {
+  .nav-menu-button {
     display: inline-flex;
   }
 
-  .js-ready .nav-links {
+  .nav-links {
     position: absolute;
     top: calc(100% + 8px);
     right: 0;
     z-index: 30;
     width: min(244px, calc(100vw - 32px));
-    display: grid;
+    display: none;
     gap: 6px;
     padding: 10px;
     border: 1px solid rgba(34, 211, 238, 0.22);
@@ -840,21 +840,13 @@ h1 {
       0 24px 70px rgba(2, 3, 10, 0.54),
       0 0 32px rgba(34, 211, 238, 0.12);
     backdrop-filter: blur(18px);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-6px);
-    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
-    visibility: hidden;
   }
 
-  .js-ready .nav-links.is-open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-    visibility: visible;
+  .nav-links.is-open {
+    display: grid;
   }
 
-  .js-ready .nav-links .nav-link {
+  .nav-links .nav-link {
     width: 100%;
     justify-content: flex-start;
     border-radius: 14px;
